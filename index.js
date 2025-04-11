@@ -25,9 +25,9 @@ let userentry=[];
       localStorage.setItem('userentry', JSON.stringify(userentry));
       form.reset(); // Reset the form fields
     const users = JSON.parse(localStorage.getItem("userentry")) || [];
-
-  const tableBody = document.querySelector("#usertable tbody");
     });
+  const tableBody = document.querySelector("#usertable tbody");
+   
   userentry.forEach(user => {
     const row = document.createElement("tr");
     row.innerHTML = `<td>${user.name}</td><td>${user.email}</td><td>${user.password}</td><td>${user.dob}</td><td>${user.accept ? 'True' : 'False'}</td>`;
